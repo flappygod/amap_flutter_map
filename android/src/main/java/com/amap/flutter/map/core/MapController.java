@@ -166,7 +166,7 @@ public class MapController
         }
         if (LogUtil.isDebugMode && !hasStarted) {
             hasStarted = true;
-            int index = myArray[0];
+            //int index = myArray[0];
         }
     }
 
