@@ -119,7 +119,7 @@ class BitmapDescriptor {
       'fromAssetImage',
       assetBundleImageKey.name,
       assetBundleImageKey.scale,
-      if (kIsWeb && configuration?.size != null)
+      if (kIsWeb && configuration.size != null)
         [
           configuration.size!.width,
           configuration.size!.height,

@@ -11,10 +11,7 @@ class CameraPosition {
     required this.target,
     this.tilt = 0.0,
     this.zoom = 10,
-  })  : assert(bearing != null),
-        assert(target != null),
-        assert(tilt != null),
-        assert(zoom != null);
+  }) ;
 
   /// 可视区域指向的方向，以角度为单位，从正北向逆时针方向计算，从0 度到360 度。
   final double bearing;

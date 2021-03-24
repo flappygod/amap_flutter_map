@@ -195,10 +195,10 @@ class Marker extends BaseOverlay {
     addIfPresent('anchor', _offsetToJson(anchor));
     addIfPresent('clickable', clickable);
     addIfPresent('draggable', draggable);
-    addIfPresent('icon', icon?.toMap());
+    addIfPresent('icon', icon.toMap());
     addIfPresent('infoWindowEnable', infoWindowEnable);
-    addIfPresent('infoWindow', infoWindow?._toMap());
-    addIfPresent('position', position?.toJson());
+    addIfPresent('infoWindow', infoWindow._toMap());
+    addIfPresent('position', position.toJson());
     addIfPresent('rotation', rotation);
     addIfPresent('visible', visible);
     addIfPresent('zIndex', zIndex);

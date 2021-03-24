@@ -122,8 +122,7 @@ class AMapWidget extends StatefulWidget {
     this.markers,
     this.polylines,
     this.polygons,
-  })  : assert(initialCameraPosition != null),
-        super(key: key);
+  })  : super(key: key);
 
   ///
   @override
@@ -142,7 +141,7 @@ class _MapState extends State<AMapWidget> {
     AMapUtil.init(context);
     final Map<String, dynamic> creationParams = <String, dynamic>{
       'apiKey': widget.apiKey?.toMap(),
-      'initialCameraPosition': widget.initialCameraPosition?.toMap(),
+      'initialCameraPosition': widget.initialCameraPosition.toMap(),
       'options': _mapOptions?.toMap(),
       'markersToAdd': serializeOverlaySet(widget.markers),
       'polylinesToAdd': serializeOverlaySet(widget.polylines),
@@ -353,7 +352,7 @@ class _AMapOptions {
       }
     }
 
-    addIfNonNull('mapType', mapType?.index);
+    addIfNonNull('mapType', mapType.index);
     addIfNonNull('buildingsEnabled', buildingsEnabled);
     addIfNonNull('customStyleOptions', customStyleOptions?.clone()?.toMap());
     addIfNonNull('compassEnabled', compassEnabled);

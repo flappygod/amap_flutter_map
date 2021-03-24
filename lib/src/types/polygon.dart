@@ -76,12 +76,10 @@ class Polygon extends BaseOverlay {
     }
 
     addIfPresent('id', id);
-    if (points != null) {
-      json['points'] = _pointsToJson();
-    }
+    json['points'] = _pointsToJson();
     addIfPresent('strokeWidth', strokeWidth);
-    addIfPresent('strokeColor', strokeColor?.value);
-    addIfPresent('fillColor', fillColor?.value);
+    addIfPresent('strokeColor', strokeColor.value);
+    addIfPresent('fillColor', fillColor.value);
     addIfPresent('visible', visible);
     addIfPresent('joinType', joinType.index);
     return json;

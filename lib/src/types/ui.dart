@@ -63,8 +63,8 @@ class MinMaxZoomPreference {
   /// 缩放级别范围为[3, 20]，超出范围取边界值
   ///
   const MinMaxZoomPreference(double minZoom, double maxZoom)
-      : this.minZoom = ((minZoom ?? 3) > (maxZoom ?? 20) ? maxZoom : minZoom),
-        this.maxZoom = ((minZoom ?? 3) > (maxZoom ?? 20) ? minZoom : maxZoom);
+      : this.minZoom = (minZoom > maxZoom ? maxZoom : minZoom),
+        this.maxZoom = (minZoom > maxZoom ? minZoom : maxZoom);
 
   /// 最小zoomLevel
   final double minZoom;
